@@ -120,73 +120,115 @@ h1 {
 .flex-container-shop,
 .flex-container-subscribe,
 .flex-container-about,
-.flex-container-journal {
+.flex-container-journal,
+.flex-container-journal-row-one,
+.flex-container-journal-row-two,
+.flex-container-journal-row-three,
+.flex-container-headline-journal {
 	display: flex;
 	flex-direction: row;
 	height: 321px;
 	margin-top: 24px;
 }
-.box {
-	flex-grow: 1;
+
+/* home boxes */
+
+.homepage-box,
+.about-box,
+.journal-box,
+.headline-journal {
 	min-width: 200px;
 	margin-left: 6px;
 	margin-right: 6px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-basis: 100%;
 }
 
-.one {
+.home-shop-one {
 	background-image: url("Image Assets/box 1.jpg");
-	flex-grow: 1;
 	background-size: cover;
 }
 
-.two {
+.home-shop-two {
 	background: #1b4040;
-	flex-grow: 1;
 }
 
-.three {
+.home-shop-three {
 	background-image: url("Image Assets/box 2.jpg");
-	flex-grow: 1;
 	background-size: cover;
 }
-
-.four {
-	background-image: url("Image Assets/box 3.jpg");
-	flex-grow: 1;
-	background-size: cover;
-}
-
-.five {
-	background: #e4c47c;
-	flex-grow: 1;
-}
-.six {
+.home-about-one {
 	background-image: url("Image Assets/box 4.jpg");
-	flex-grow: 1;
 	background-size: cover;
 }
-.seven {
+.home-about-two {
 	background: #cca4a6;
-	flex-grow: 1;
 }
-.eight {
-	background-image: url("Image Assets/box 5.jpg");
-	flex-grow: 1;
+.home-journal-one {
+	background-image: url("Image Assets/box 6.jpg");
 	background-size: cover;
 }
-.nine {
+.home-journal-two {
+	background-size: cover;
 	background: #647973;
-	flex-grow: 1;
 }
-.ten {
+.home-journal-three {
 	background-image: url("Image Assets/box 6.jpg");
-	flex-grow: 1;
 	background-size: cover;
 }
 
+/* about boxes */
+
+.about {
+	background-image: url("Image Assets/box 6.jpg");
+	background-size: cover;
+}
+.about-text {
+	background: white;
+}
+
+/* journal boxes */
+
+.headline-journal-image {
+	background-image: url("Image Assets/box 4.jpg");
+	background-size: cover;
+}
+.headline-journal-text {
+	background: #cca4a6;
+}
+
+.blog-one {
+	background: white;
+}
+
+.blog-two {
+	background: white;
+}
+
+.blog-three {
+	background: white;
+}
+.blog-four {
+	background: white;
+}
+.blog-five {
+	background: white;
+}
+.blog-six {
+	background: white;
+}
+.blog-seven {
+	background: white;
+}
+.blog-eight {
+	background: white;
+}
+
+.blog-nine {
+	background: white;
+}
 h2 {
 	color: #1b4040;
 	font-family: "Montserrat", sans-serif;
@@ -207,6 +249,16 @@ h3 {
 	padding-left: 150px;
 	padding-right: 150px;
 }
+h4 {
+	color: #1b4040;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
 p {
 	color: white;
 	font-family: "Montserrat", sans-serif;
