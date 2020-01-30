@@ -1,0 +1,363 @@
+/* overall page styling */
+:root {
+	--background: #cca4a6;
+}
+body {
+	background-color: #f0f0f0;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	margin: 0;
+}
+
+/* header and nav bar styling */
+
+.nav-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+header {
+	background: var(--background);
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	height: 70px;
+}
+/* logo  */
+.nav-logo {
+	width: 15vmin;
+}
+/* Navigation Dropdown Button */
+
+nav ul {
+	list-style-type: none;
+	align-items: center;
+	padding: 15px;
+}
+nav a {
+	color: white;
+	text-decoration: none;
+	font-size: calc(1.5vmin + 5px);
+	text-transform: uppercase;
+}
+
+nav a:hover {
+	color: #e4c47c;
+	transition: 0.3s color linear;
+}
+.dropbtn {
+	background-color: #1b4040;
+	color: white;
+	padding: 16px;
+	text-align: center;
+	border: none;
+	font-size: calc(1.5vmin + 5px);
+	right: 0;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: white;
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	color: #cca4a6;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	width: 80%;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: #1b4040;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+	background-color: #cca4a6;
+}
+
+/* header text + paragraph styling */
+h1 {
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: calc(1.5vw + 8px);
+	text-align: center;
+	width: 80%;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+.flex-container-01 {
+	display: flex;
+	flex-direction: row;
+	height: 321px;
+	margin: 150px auto 48px;
+	background: #1b4040;
+	justify-content: center;
+	align-items: center;
+}
+.flex-container-shop,
+.flex-container-subscribe,
+.flex-container-about,
+.flex-container-journal {
+	display: flex;
+	flex-direction: row;
+	height: 321px;
+	margin-top: 24px;
+}
+.box {
+	flex-grow: 1;
+	min-width: 200px;
+	margin-left: 6px;
+	margin-right: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.one {
+	background-image: url("Image Assets/box 1.jpg");
+	flex-grow: 1;
+	background-size: cover;
+}
+
+.two {
+	background: #1b4040;
+	flex-grow: 1;
+}
+
+.three {
+	background-image: url("Image Assets/box 2.jpg");
+	flex-grow: 1;
+	background-size: cover;
+}
+
+.four {
+	background-image: url("Image Assets/box 3.jpg");
+	flex-grow: 1;
+	background-size: cover;
+}
+
+.five {
+	background: #e4c47c;
+	flex-grow: 1;
+}
+.six {
+	background-image: url("Image Assets/box 4.jpg");
+	flex-grow: 1;
+	background-size: cover;
+}
+.seven {
+	background: #cca4a6;
+	flex-grow: 1;
+}
+.eight {
+	background-image: url("Image Assets/box 5.jpg");
+	flex-grow: 1;
+	background-size: cover;
+}
+.nine {
+	background: #647973;
+	flex-grow: 1;
+}
+.ten {
+	background-image: url("Image Assets/box 6.jpg");
+	flex-grow: 1;
+	background-size: cover;
+}
+
+h2 {
+	color: #1b4040;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 10px;
+	padding-right: 200px;
+	padding-bottom: 0;
+	padding-left: 200px;
+}
+h3 {
+	color: #1b4040;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	text-align: center;
+	padding-left: 150px;
+	padding-right: 150px;
+}
+p {
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	text-align: center;
+	padding-left: 200px;
+	padding-right: 200px;
+}
+
+/* form input styling */
+form {
+	height: 300px;
+	color: #1b4040;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	align-items: center;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+input {
+	align-items: center;
+	overflow: auto;
+	height: 20px;
+	width: 400px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	border-radius: 2px;
+	border: none;
+	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+textarea {
+	width: 400px;
+	height: 50px;
+	resize: none;
+	overflow: auto;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	border-radius: 2px;
+	border: none;
+	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+/* button styling */
+
+.button {
+	display: block;
+	max-width: 300px;
+	background-color: #1b4040;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	border: 2px solid #1b4040;
+	margin: auto;
+	padding: 10px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+}
+
+.button:hover {
+	background-color: #f0f0f0;
+	color: #e4c47c;
+	border: 2px solid #e4c47c;
+}
+
+/* text link styling */
+
+.text-links {
+	color: #1b4040;
+}
+.text-links:link {
+	color: #1b4040;
+	text-decoration: none;
+}
+
+.text-links:visited {
+	color: #e4c47c;
+}
+
+.text-links:hover {
+	color: #e4c47c;
+	text-decoration: underline;
+}
+
+.homepage-links:link,
+.homepage-links:visited,
+.homepage-links:hover {
+	color: white;
+	text-decoration: none;
+}
+
+/* footer styling */
+footer {
+	color: white;
+	width: 100%;
+	height: 50px;
+	background: var(--background);
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	z-index: 999;
+}
+
+.site-footer {
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+	.one,
+	.three,
+	.four,
+	.six,
+	.eight,
+	.ten {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.name,
+	.email,
+	.subject,
+	.comments,
+	.button {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	nav ul {
+		flex-direction: column;
+	}
+}
+
+/* @media screen and (max-width: 480px) {
+  h1 {
+    font-size: 25px;
+  }
+} */
