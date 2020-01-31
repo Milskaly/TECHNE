@@ -13,6 +13,7 @@
 			href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap"
 			rel="stylesheet"
 		/>
+		<script src="script.js" async></script>
 	</head>
 	<header>
 		<nav class="nav-container">
@@ -38,35 +39,46 @@
 	<body>
 		<main>
 			<div class="wrapper">
-				<div class="flex-container-01">
+				<div class="flex-container-02">
 					<h1>
-						Techne Shop
+						SHOPPING CART
 					</h1>
 				</div>
 			</div>
 			<div class="wrapper">
-				<div class="flex-container-shop-row-one">
-					<div class="shop-box product-one">
-						<h2>
-							<a class="text-links" href="product-page-one.html">PRODUCT ONE</a>
-						</h2>
-					</div>
-
-					<div class="shop-box product-two">
-						<h2>
-							<a class="text-links" href="product-page-one.html">PRODUCT TWO</a>
-						</h2>
-					</div>
-
-					<div class="shop-box product-three">
-						<h2>
-							<a class="text-links" href="product-page-one.html"
-								>PRODUCT THREE</a
-							>
-						</h2>
-					</div>
-				</div>
-			</div>
+                <div class="cart-row">
+                    <div class="cart-item cart-header cart-column"><h5>ITEM</h5></div>
+                    <div class="cart-price cart-header cart-column"><h5>PRICE</h5></div>
+                    <div class="cart-quantity cart-header cart-column"><h5>QUANTITY</h5></div>
+                </div>
+                <div class="cart-items">
+                    <div class="cart-row">
+                        <div class="cart-item cart-column">
+                            <img class="cart-item-image" src="Image Assets/box 6.jpg">
+                            <div class="cart-item-title"><h5>Product One</h5></div>
+                        </div>
+                        <div class="cart-price cart-column"><h5>£20</h5></div>
+                        <div class="cart-quantity cart-column">
+                            <input class="cart-quantity-input" type="number" value="1">
+                            <button class="button button-danger" type="button">REMOVE</button>
+                        </div>
+                    </div>
+                    <div class="cart-row">
+                        <div class="cart-item cart-column">
+                            <img class="cart-item-image" src="Image Assets/box 6.jpg">
+                            <div class="cart-item-title"><h5>Product Two</h5></div>
+                        </div>
+                        <div class="cart-price cart-column"><h5>£10</h5> </div>
+                        <div class="cart-quantity cart-column">
+                            <input class="cart-quantity-input" type="number" value="2">
+                            <button class="button button-danger" type="button">REMOVE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-total" class="cart-total-title"><h6>TOTAL</h6>
+                    <div class="cart-total-price"><h6>£30</h6></div>
+                </div>
+                <button class="button button-purchase" type="button">PURCHASE</button>
 		</main>
 		<form action="/example.html" method="POST">
 			<h2>Got some questions?</h2>
