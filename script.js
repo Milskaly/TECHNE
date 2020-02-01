@@ -6,7 +6,6 @@ if (document.readyState == "loading") {
 // removeCartButtonItems stores all the variables with the class name 'button-danger'
 function ready() {
 	let removeCartButtonItems = document.getElementsByClassName("button-danger");
-	console.log(removeCartButtonItems);
 
 	// add event listeners - loop through objects
 	//make function remove item from cart
@@ -47,55 +46,56 @@ function removeCartItem(event) {
 	buttonClicked.parentElement.parentElement.remove();
 	updateCartTotal();
 }
-function addToCartClicked(event) {
-	let button = event.target;
-	let shopItem = button.parentElement.parentElement;
-	let addToCartClicked = shopItem.getElementsByClassName("product-title")[0]
-		.innerText;
-	let price = shopItem.getElementsByClassName("product-price")[0].innerText;
-	let imageSrc = shopItem.getElementsByClassName("product-image")[0].src;
-	console.log(title, price, imageSrc);
-	addItemToCart(title, price, imageSrc);
-	updateCartTotal();
-
-	function addItemToCart(title, price, imageSrc) {
-		let cartRow = document.createElement("div");
-		cartRow.classList.add("cart-row");
-		let cartItems = document.getElementsByClassName("cart-items")[0];
-		let cartItemsNames = cartItems.getElementsByClassName("product-title");
-		for (let i = 0; i < cartItemsNames.length; i++) {
-			if (cartItemNames[i].innerText == title) {
-				alert("This item is already in your basket");
-				return;
-			}
-		}
-		let cartRowContents = `
-        <div class="cart-item cart-column">
-        <img class="cart-item-image" src="${imageSrc}">
-        <span class="cart-item-title"><h5>${title}</h5></span>
-    </div>
-    <span class="cart-price cart-column"><h5>${price}£20</h5></span>
-    <div class="cart-quantity cart-column">
-        <input class="cart-quantity-input" type="number" value="1">
-        <button class="button button-danger" type="button">REMOVE</button>
-    </div>`;
-		cartRow.innerHTML = cartRowContents;
-		cartItems.append(cartRow);
-		cartRow
-			.getElementsByClassName("button-danger")[0]
-			.addEventListener("click", removeCartItem);
-	}
-	cartRow
-		.getElementsByClassName("cart-quantity-input")[0]
-		.addEventListener("change", quantityChanged);
-}
 
 function quantityChanged(event) {
-	let input = event.target;
+	var input = event.target;
 	if (isNaN(input.value) || input.value <= 0) {
 		input.value = 1;
 	}
 	updateCartTotal();
+}
+
+function addToCartClicked(event) {
+	let button = event.target;
+	let shopItem = button.parentElement.parentElement;
+	let title = shopItem.getElementsByClassName("product-title")[0].innerText;
+	let price = shopItem.getElementsByClassName("product-price")[0].innerText;
+	// let imageSrc = shopItem.getElementsByClassName("product-image")[0].src;
+	addItemToCart(title, price);
+	updateCartTotal();
+}
+
+function addItemToCart(title, price, imageSrc) {
+	let cartRow = document.createElement("div");
+	cartRow.classList.add("cart-row");
+	let cartItems = document.getElementsByClassName("cart-items")[0];
+	let cartItemNames = cartItems.getElementsByClassName("product-title");
+	for (let i = 0; i < cartItemNames.length; i++) {
+		if (cartItemNames[i].innerText === title) {
+			alert("This item is already added to the cart");
+			return;
+		}
+	}
+	let cartRowContents = `
+	<div class="cart-item cart-column">
+	<img class="cart-item-image" src="${imageSrc}">
+	<span class="cart-item-title"><h5>${title}</span>
+</div>
+<span class="cart-price cart-column"><h5>${price}</h5> </span>
+<div class="cart-quantity cart-column">
+	<input class="cart-quantity-input" type="number" value="1">
+	<button class="button button-danger" type="button">REMOVE</button>
+</div>
+</div>`;
+	cartRow.innerHTML = cartRowContents;
+	cartItems.append(cartRow);
+	cartRow
+		.getElementsByClassName("button-danger")[0]
+		.addEventListener("click", removeCartItem);
+
+	cartRow
+		.getElementsByClassName("cart-quantity-input")[0]
+		.addEventListener("change", quantityChanged);
 }
 
 // Update cart total
