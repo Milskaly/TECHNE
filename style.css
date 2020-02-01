@@ -344,9 +344,12 @@ p {
 	background-image: url("Image Assets/box 6.jpg");
 	background-size: cover;
 }
-.product-details {
+.product-title,
+.product-description,
+.product-price {
 	background: white;
 	flex-direction: column;
+	padding-bottom: 60px;
 }
 
 /* form input styling */
@@ -513,6 +516,26 @@ textarea {
 	padding: 10px;
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
+}
+
+.shop-item-button {
+	max-width: 300px;
+	background-color: #1b4040;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: right;
+	border: 2px solid #1b4040;
+	padding: 10px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+}
+.shop-item-button:hover {
+	background-color: #f0f0f0;
+	color: #e4c47c;
+	border: 2px solid #e4c47c;
 }
 
 .button-shop:hover {
