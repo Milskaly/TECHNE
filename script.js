@@ -102,7 +102,7 @@ function quantityChanged(event) {
 // Add together to get the total
 
 function updateCartTotal() {
-	let cartItemContainer = document.getElementsByClassName("cart-items")[0]; //Select first item inside of the array
+	let cartItemContainer = document.getElementsByClassName("cart-items")[0];
 	let cartRows = cartItemContainer.getElementsByClassName("cart-row");
 	let total = 0;
 	for (let i = 0; i < cartRows.length; i++) {
@@ -111,9 +111,9 @@ function updateCartTotal() {
 		let quantityElement = cartRow.getElementsByClassName(
 			"cart-quantity-input"
 		)[0];
-		let price = parseFloat(priceElement.innerText.replace("£", " ")); //Remove '£' so we can do calculations with this number
-		let quanity = quantityElement.value;
-		total = total + price * quanity;
+		let price = parseFloat(priceElement.innerText.replace("£", ""));
+		let quantity = quantityElement.value;
+		total = total + price * quantity;
 	}
 	total = Math.round(total * 100) / 100;
 	document.getElementsByClassName("cart-total-price")[0].innerText =
