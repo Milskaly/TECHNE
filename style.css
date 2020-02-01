@@ -324,7 +324,13 @@ p {
 	background-size: cover;
 }
 
-.flex-container-product-page {
+.flex-container-product-one {
+	display: flex;
+	flex-direction: row;
+	height: 642px;
+	margin-top: 24px;
+}
+.flex-container-product-two {
 	display: flex;
 	flex-direction: row;
 	height: 642px;
