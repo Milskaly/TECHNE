@@ -26,10 +26,11 @@ function ready() {
 	for (let i = 0; i < addToCartButtons.length; i++) {
 		let button = addToCartButtons[i];
 		button.addEventListener("click", addToCartClicked);
+
+		document
+			.getElementsByClassName("button-purchase")[0]
+			.addEventListener("click", purchaseClicked);
 	}
-	document
-		.getElementsByClassName("button-purchase")[0]
-		.addEventListener("click", purchaseClicked);
 }
 function purchaseClicked() {
 	alert("Thank you for your purchase");

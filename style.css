@@ -331,7 +331,8 @@ p {
 	margin-top: 24px;
 }
 
-.product-box {
+.product-box,
+.product-image {
 	min-width: 200px;
 	margin-left: 6px;
 	margin-right: 6px;
@@ -340,13 +341,10 @@ p {
 	align-items: center;
 	flex-basis: 100%;
 }
-.product {
-	background-image: url("Image Assets/box 6.jpg");
+.product-image {
 	background-size: cover;
 }
-.product-title,
-.product-description,
-.product-price {
+.product-details {
 	background: white;
 	flex-direction: column;
 	padding-bottom: 60px;
