@@ -53,7 +53,7 @@ function addToCartClicked(event) {
 	let addToCartClicked = shopItem.getElementsByClassName("product-title")[0]
 		.innerText;
 	let price = shopItem.getElementsByClassName("product-price")[0].innerText;
-	let imageSrc = shopItem.getElementsByClassName("product-image")[0].Src;
+	let imageSrc = shopItem.getElementsByClassName("product-image")[0].src;
 	console.log(title, price, imageSrc);
 	addItemToCart(title, price, imageSrc);
 	updateCartTotal();
