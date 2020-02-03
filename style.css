@@ -168,7 +168,7 @@ p {
 	display: flex;
 	flex-direction: row;
 	height: 321px;
-	margin: 150px auto 48px;
+	margin: 100px auto 48px;
 	background: #1b4040;
 	justify-content: center;
 	align-items: center;
@@ -178,7 +178,7 @@ p {
 	display: flex;
 	flex-direction: row;
 	height: 107px;
-	margin: 150px auto 48px;
+	margin: 100px auto 48px;
 	background: #1b4040;
 	justify-content: center;
 	align-items: center;
@@ -336,9 +336,10 @@ p {
 
 .flex-container-product {
 	display: flex;
-	height: 642px;
+	height: 500px;
 	margin-top: 24px;
 	flex: 1;
+	padding-bottom: 40px;
 }
 
 .product-image {
