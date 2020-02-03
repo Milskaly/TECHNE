@@ -31,6 +31,8 @@ header {
 /* logo  */
 .nav-logo {
 	width: 15vmin;
+	max-width: 100%;
+	height: auto;
 }
 /* Navigation Dropdown Button */
 
@@ -146,7 +148,6 @@ h6 {
 	font-weight: 500;
 	font-size: 20px;
 	text-align: right;
-	margin-right: 1.5em;
 }
 
 p {
@@ -158,6 +159,8 @@ p {
 	padding-left: 200px;
 	padding-right: 200px;
 }
+
+/* Page layout flexboxes */
 
 .wrapper {
 	width: 100%;
@@ -198,7 +201,7 @@ p {
 	margin-top: 24px;
 }
 
-/* home boxes */
+/* home page boxes */
 
 .homepage-box,
 .about-box,
@@ -349,71 +352,22 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 	object-fit: cover;
 }
 
 .product-details {
 	flex-direction: column;
-	padding-bottom: 60px;
-}
-
-/* form input styling */
-form {
-	height: 300px;
-	color: #1b4040;
-	font-family: "Montserrat", sans-serif;
-	font-weight: 300;
-	font-size: 15px;
-	align-items: center;
-	margin-top: 100px;
-	margin-bottom: 100px;
-}
-
-input {
-	align-items: center;
-	overflow: auto;
-	height: 20px;
-	width: 400px;
-	font-family: "Montserrat", sans-serif;
-	font-weight: 300;
-	border-radius: 2px;
-	border: none;
-	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 10px;
-}
-
-textarea {
-	width: 400px;
-	height: 50px;
-	resize: none;
-	overflow: auto;
-	font-family: "Montserrat", sans-serif;
-	font-weight: 300;
-	border-radius: 2px;
-	border: none;
-	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 10px;
+	padding-bottom: 15px;
 }
 
 /* shopping cart */
 
-.cart-header {
-	font-weight: bold;
-	font-size: 1.25em;
-	color: #333;
-}
-
 .cart-column {
 	display: flex;
 	align-items: center;
-	border-bottom: 2px solid #1b4040;
-	margin-right: 1.5em;
-	padding-bottom: 5px;
+	border-bottom: 1px solid #1b4040;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 
 .cart-row {
@@ -421,68 +375,53 @@ textarea {
 }
 
 .cart-item {
-	width: 45%;
+	width: 50%;
 }
 
 .cart-price {
 	width: 20%;
 	font-size: 1.2em;
-	color: #333;
+	color: #1b4040;
 }
 
 .cart-quantity {
-	width: 35%;
+	width: 30%;
 }
 
 .cart-item-title {
-	color: #333;
-	margin-left: 0.5em;
-	font-size: 1.2em;
+	margin-left: 10px;
 }
 
 .cart-item-image {
 	width: 75px;
-	background-image: url("Image Assets/box 6.jpg");
 	background-size: cover;
 }
 
 .cart-quantity-input {
-	height: 34px;
-	width: 50px;
-	border-radius: 5px;
-	border: 1px solid #56ccf2;
-	background-color: #eee;
-	color: #333;
-	padding: 0;
+	height: 25;
+	width: 40px;
+	border-radius: 3px;
+	border: 1px solid #1b4040;
+	background-color: white;
+	color: #1b4040;
 	text-align: center;
 	font-size: 1.2em;
-	margin-right: 25px;
 }
 
 .cart-row:last-child {
-	border-bottom: 1px solid black;
+	border-bottom: 2px solid #1b4040;
 }
 
 .cart-row:last-child .cart-column {
 	border: none;
 }
 
-.cart-total {
-	text-align: end;
-	margin-top: 10px;
-	margin-right: 10px;
-}
-
-.cart-total-title {
-	font-weight: bold;
-	font-size: 1.5em;
-	color: black;
-	margin-right: 20px;
-}
-
+.cart-total,
+.cart-total-title,
 .cart-total-price {
-	color: #333;
-	font-size: 1.1em;
+	font-size: 20px;
+	color: #1b4040;
+	text-align: right;
 }
 
 /* button styling */
@@ -569,19 +508,22 @@ textarea {
 
 .text-links {
 	color: #1b4040;
+	text-decoration: none;
 }
+
 .text-links:link {
 	color: #1b4040;
 	text-decoration: none;
 }
 
 .text-links:visited {
-	color: #e4c47c;
+	color: #1b4040;
+	text-decoration: none;
 }
 
 .text-links:hover {
-	color: #e4c47c;
-	text-decoration: underline;
+	color: #cca4a6;
+	text-decoration: none;
 }
 
 .homepage-links:link,
@@ -589,6 +531,47 @@ textarea {
 .homepage-links:hover {
 	color: white;
 	text-decoration: none;
+}
+/* form input styling */
+form {
+	height: 300px;
+	color: #1b4040;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	align-items: center;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+input {
+	align-items: center;
+	overflow: auto;
+	height: 20px;
+	width: 400px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	border-radius: 2px;
+	border: none;
+	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+textarea {
+	width: 400px;
+	height: 50px;
+	resize: none;
+	overflow: auto;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	border-radius: 2px;
+	border: none;
+	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
 }
 
 /* footer styling */
