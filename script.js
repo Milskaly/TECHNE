@@ -70,13 +70,13 @@ function addToCartClicked(event) {
 function addItemToCart(title, price, imageSrc) {
 	let cartRow = document.createElement("div");
 	cartRow.classList.add("cart-row");
-	let cartItems = document.getElementsByClassName("flex-container-products")[0];
+	let cartItems = document.getElementsByClassName("cart-items")[0];
 	let cartItemNames = cartItems.getElementsByClassName("product-title");
 
 	//stops items in basket duplicating
 
 	for (let i = 0; i < cartItemNames.length; i++) {
-		if (cartItemNames[i].innerText == title) {
+		if (cartItemNames[i].innerText === title) {
 			alert("This item is already in your basket");
 			return;
 		}
