@@ -60,8 +60,8 @@ function addToCartClicked(event) {
 	let shopItem = button.parentElement.parentElement;
 	let title = shopItem.getElementsByClassName("product-title")[0].innerText;
 	let price = shopItem.getElementsByClassName("product-price")[0].innerText;
-	// let imageSrc = shopItem.getElementsByClassName("product-image")[0].src;
-	addItemToCart(title, price);
+	let imageSrc = shopItem.getElementsByClassName("product-image")[0].src;
+	addItemToCart(title, price, imageSrc);
 	updateCartTotal();
 }
 
