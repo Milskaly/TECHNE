@@ -1,26 +1,25 @@
+//Checks to see if the document is loaded before trying to access different elements
+
 if (document.readyState == "loading") {
 	document.addEventListener("DOMContentLoaded", ready);
 } else {
 	ready();
 }
-// removeCartButtonItems stores all the variables with the class name 'button-danger'
+//returns all elements with relevant class and includes event listeners
 function ready() {
 	let removeCartButtonItems = document.getElementsByClassName("button-danger");
-
-	// add event listeners - loop through objects
-	//make function remove item from cart
-
 	for (let i = 0; i < removeCartButtonItems.length; i++) {
 		let button = removeCartButtonItems[i];
 		button.addEventListener("click", removeCartItem);
 	}
 
+	//loop limits quantity inputs
 	let quantityInputs = document.getElementsByClassName("cart-quantity-input");
 	for (let i = 0; i < quantityInputs.length; i++) {
 		let input = quantityInputs[i];
 		input.addEventListener("change", quantityChanged);
 	}
-
+	// add to cart buttons
 	let addToCartButtons = document.getElementsByClassName("shop-item-button");
 	for (let i = 0; i < addToCartButtons.length; i++) {
 		let button = addToCartButtons[i];
@@ -40,12 +39,13 @@ function purchaseClicked() {
 
 	updateCartTotal();
 }
-
+//removes cart item
 function removeCartItem(event) {
 	let buttonClicked = event.target;
 	buttonClicked.parentElement.parentElement.remove();
 	updateCartTotal();
 }
+// function for quantity input, checks (value) to see if it's a number or not
 
 function quantityChanged(event) {
 	var input = event.target;
@@ -54,6 +54,7 @@ function quantityChanged(event) {
 	}
 	updateCartTotal();
 }
+// adds item, images and price to cart by class name
 
 function addToCartClicked(event) {
 	let button = event.target;
@@ -64,15 +65,19 @@ function addToCartClicked(event) {
 	addItemToCart(title, price, imageSrc);
 	updateCartTotal();
 }
+//creates cart row/element for item to cart items
 
 function addItemToCart(title, price, imageSrc) {
 	let cartRow = document.createElement("div");
 	cartRow.classList.add("cart-row");
 	let cartItems = document.getElementsByClassName("cart-items")[0];
 	let cartItemNames = cartItems.getElementsByClassName("product-title");
+
+	//stops items in basket duplicating
+
 	for (let i = 0; i < cartItemNames.length; i++) {
 		if (cartItemNames[i].innerText === title) {
-			alert("This item is already added to the cart");
+			alert("This item is already in your basket");
 			return;
 		}
 	}
@@ -89,6 +94,8 @@ function addItemToCart(title, price, imageSrc) {
 </div>`;
 	cartRow.innerHTML = cartRowContents;
 	cartItems.append(cartRow);
+	//removes cart items after they've been added
+
 	cartRow
 		.getElementsByClassName("button-danger")[0]
 		.addEventListener("click", removeCartItem);
@@ -116,6 +123,9 @@ function updateCartTotal() {
 		let quantity = quantityElement.value;
 		total = total + price * quantity;
 	}
+
+	//rounds total to two decimal places
+
 	total = Math.round(total * 100) / 100;
 	document.getElementsByClassName("cart-total-price")[0].innerText =
 		"£" + total;

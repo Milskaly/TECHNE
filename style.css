@@ -300,6 +300,10 @@ p {
 
 /* shop product boxes */
 
+.product-box {
+	background: white;
+}
+
 .product-one {
 	background: white;
 }
@@ -324,14 +328,19 @@ p {
 	background-size: cover;
 }
 
-.flex-container-product-one {
-	display: flex;
-	flex-direction: row;
-	height: 642px;
-	margin-top: 24px;
+.flex-container-products {
+	flex-direction: column;
+	padding-bottom: 60px;
+	display: block;
 }
 
-.product-box,
+.flex-container-product {
+	display: flex;
+	height: 642px;
+	margin-top: 24px;
+	flex: 1;
+}
+
 .product-image {
 	min-width: 200px;
 	margin-left: 6px;
@@ -339,12 +348,11 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-basis: 100%;
+
 	object-fit: cover;
 }
 
 .product-details {
-	background: white;
 	flex-direction: column;
 	padding-bottom: 60px;
 }
