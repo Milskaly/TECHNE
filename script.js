@@ -68,17 +68,16 @@ function addToCartClicked(event) {
 	updateCartTotal();
 }
 
-//creates cart row/element for item to be listed in cart
+//creates cart row/element for item to cart items
 function addItemToCart(title, price, imageSrc) {
 	let cartRow = document.createElement("div");
 	cartRow.classList.add("cart-row");
 	let cartItems = document.getElementsByClassName("cart-items")[0];
-	let cartItemNames = cartItems.getElementsByClassName("product-title");
-
-	//event listener to stop items in basket duplicating
+	let cartItemNames = cartItems.getElementsByClassName("cart-item-title");
+	//stops items in basket duplicating
 	for (let i = 0; i < cartItemNames.length; i++) {
-		if (cartItemNames[i].innerText === title) {
-			alert("This item is already in your basket");
+		if (cartItemNames[i].innerText == title) {
+			alert("This item is already in your cart");
 			return;
 		}
 	}
