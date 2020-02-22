@@ -118,7 +118,7 @@ function updateCartTotal() {
     let quantityElement = cartRow.getElementsByClassName(
       "cart-quantity-input"
     )[0];
-    let price = parseFloat(priceElement.innerText.replace("£", ""));
+    let price = parseFloat(priceElement.innerText.replace("&pound;", ""));
     let quantity = quantityElement.value;
     total = total + price * quantity;
   }
@@ -126,5 +126,5 @@ function updateCartTotal() {
   //rounds total to two decimal places
   total = Math.round(total * 100) / 100;
   document.getElementsByClassName("cart-total-price")[0].innerText =
-    "£" + total;
+    "&pound;" + total;
 }
