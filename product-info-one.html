@@ -1,120 +1,197 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>TECHNE - Work Life Balance</title>
-		<link
-			rel="shortcut icon"
-			type="image/x-icon"
-			href="Image Assets/Techne-favicon.png"
-		/>
-		<link href="style.css" rel="stylesheet" type="text/css" />
-		<link
-			href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- While a script tag is being loaded, nothing else on the page can load -->
-		<!-- The "async" tag tells the browser to load the script and page simultaneously -->
-		<script src="script.js" async></script> 
+<html lang="en">
+	<body>
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<title>TECHNE - Work Life Balance</title>
+			<link
+				rel="shortcut icon"
+				type="image/x-icon"
+				href="Image Assets/Techne-favicon.png"
+			/>
+			<link href="style.css" rel="stylesheet" type="text/css" />
+			<link
+				href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap"
+				rel="stylesheet"
+			/>
+		
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<script src="image-slides.js" async></script> 	
+		</head>
 
-	</head>
-	<header>
-		<nav class="nav-container">
-			<a href="index.html"><img
-				src="Image Assets/Techne.png"
-				alt="Techne Logo"
-				class="nav-logo" href="index.html"
-			></a>
-			<div class="dropdown">
-				<button class="dropbtn">MENU</button>
-				<div class="dropdown-content">
+		<header>
+			<nav>
+				<a class="nav-logo" href="index.html"
+					><img src="Image Assets/Techne.png" alt="Techne Logo" class="nav-logo"
+				/></a>
+
+				<div class="nav-container">
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
 						<li><a href="shop.html">Shop</a></li>
 						<li><a href="journal.html">Journal</a></li>
+						<li>
+							<a
+								><img
+									src="Image Assets/Shopping_cart_logo.png"
+									alt="cart-logo"
+									class="cart-logo"
+									height="25px"
+							/></a>
+						</li>
 					</ul>
 				</div>
-			</div>
-		</nav>
-	</header>
+			</nav>
+		</header>
 
-	<body>
 		<main>
-			<section><div class="wrapper">
-				<div class="flex-container-product-page-banner"></div>
-			</div>
 			<div class="wrapper">
-				<div class="flex-container-products">
+				<div class="product-box product-title">
+					<h1>
+						<a class="homepage-links" href="product-info-one.html.html"
+							>THE TECHNE JOURNAL</a
+						>
+					</h1>
+				</div>
 				<div class="flex-container-product">
-					<img class="product-image" src="Image Assets/box 6.jpg">
-						
-						<div class="product-box product-details">	<h2 class ="product-title">PRODUCT ONE</h2>	
-							<h4 >
-							Aximperunt modiatiatus quo eossimod molore nosanis quiaecus dero
-							quam ut maiosae rovitiur? Qui idendis dis corro et quis eos
-							volecea volore iunt essedit ape eniscius dolupta que nitatin et
-							essimil lesequa spedior erferro idus id magnimagname sam, que ea
-							qui intiati busdae quis se ne que dolupta quatem que nobit fuga.
-							Nem vel modit, ut excerem idunt estis as ullo ium es ma sapicat
-							explitatem unt aut quam nis apel id ma quasim fugitae sam
-							voloresto conet ut denda simus.
-						</h4>
-						
-						<a class= "text-links" href=shop.html#product-one><h3 class= "text-links">You can purchase this planner here</h3> </a>
-						 </div>
-				</section>
-			</main>
-			<form action="/example.html" method="POST">
-				<h2>Got some questions?</h2>
-				<h3>
-					Please feel free to get in touch by filling out the form below. <br />
-					Not a fan of forms? Drop us an email
-					<a class="text-links" href="mailto:hello@techne.co.uk">here</a>
-				</h3>
+					<div class="homepage-box product-img slides">
+						<ul>
+						<li class="slide showing"></li>
+						<li class="slide"></li>
+						<li class="slide"></li>
+						<li class="slide"></li>
+						<li class="slide"></li>
+					</ul>
+					</div>
+<div class="homepage-box product-description">
+						<h2>2020 WEEKLY PLANNER</h2>
+					<h3>TAUPE | £25</h3>
+					<h4>
+						Aximperunt modiatiatus quo eossimod molore nosanis quiaecus dero
+						quam ut maiosae rovitiur? Qui idendis dis corro et quis eos volecea
+						volore iunt essedit ape eniscius dolupta que nitatin et essimil
+						lesequa spedior erferro idus id magnimagname sam, que ea qui intiati
+						busdae quis se ne que dolupta quatem que nobit fuga. Nem vel modit,
+						ut excerem idunt estis as ullo ium es ma sapicat explitatem unt aut
+						quam nis apel id ma quasim fugitae sam voloresto conet ut denda
+						simus.
+					</h4>
+					<h3>
+						<a class="productpage-links" href="shop.html"
+							>Click here to visit the Techne Shop</a
+						>
+					</h3>
+				</div>
+			</div>
+			<div class="homepage-box related-products-title"><h1>RELATED PRODUCTS</h1></div>
+			<div class="flex-container-blog">
+	  <div class ="homepage-box related-one" > <a href="blog.html"></a></div>
+	  <div class=" homepage-box related-two" ><a href="blog.html"></a></div>
+				<div class=" homepage-box related-three"> <a href="blog.html"></a>
+				</div>
+			</div>
+			<div class="homepage-box blog-title"><h1><a class="homepage-links" href="blog.html">THE LATEST ON THE BLOG</a></h1></div>
+				<div class="flex-container-blog">
+          <div class ="homepage-box blog-one" > <h1>PRIORITISING YOUR TO DO LISTS</h1><h3><a class="homepage-links-dark"  href="blog.html">READ MORE</a></h3></div>
+          <div class=" homepage-box blog-two" > <h1>TOOLS FOR TACKLING PROCRASTINATION</h1><h3><a class="homepage-links-dark" href="blog.html">READ MORE</a></h3></div>
+					<div class=" homepage-box blog-three"> <h1>PLANNING FOR A SUCCESSFUL LAUNCH</h1><h3><a class="homepage-links-dark" href="blog.html">READ MORE</a></h3>
+					</div>
+				</div>
+		
+		</main>
+		<form class="form" action="/example.html" method="POST">
+			<h2>SIGN UP TO PLANNING POST</h2>
+			<p class="newsletter-signup-copy">
+				Our fortnightly email is packed with planning exercises & prompts for
+				your business along with links to useful resources.
+			</p>
+			<div class="form-box">
 				<p>
 					<label class="name">
-						<input type="text" name="customer_name" required placeholder="Name" />
+						<input
+							type="text"
+							name="customer_name"
+							required
+							placeholder="full name"
+						/>
 					</label>
 				</p>
-	
+
 				<p>
 					<label class="email">
 						<input
 							type="email"
 							name="email_address"
 							required
-							placeholder="Email"
+							placeholder="please enter your email address "
 						/>
 					</label>
 				</p>
-				<p>
-					<label class="subject">
-						<input
-							type="subject"
-							name="email_subject"
-							required
-							placeholder="Lets Talk About..."
-						/>
-					</label>
-				</p>
-	
-				<p>
-					<textarea
-						class="comments"
-						name="comments"
-						maxlength="2000"
-						required
-						placeholder="It's always nice to hear from you!"
-					></textarea>
-				</p>
-	
 				<button class="button">Send</button>
-			</form>
-			<footer class="site-footer">
-				© Emilia Kalyvides 2019 | All Rights Reserved
-			</footer>
-		</body>
-	</html>
-	
-	
+			</div>
+		</form>
+		<footer>
+			<div class="site-footer" class="footer-container">
+				<a class="footer-logo" href="index.html"
+					><img
+						src="Image Assets/Techne.png"
+						alt="Techne Logo"
+						class="footer-logo"
+				/></a>
+				<div>
+					<div>
+						<ul class="footer-ul" style="padding:10px">
+							<li class="footer-li">
+								<a class="footer-links" href="index.html">Home</a>
+							</li>
+							<li class="footer-li">
+								<a class="footer-links" href="about.html">About</a>
+							</li>
+							<li class="footer-li">
+								<a class="footer-links" href="shop.html">Shop</a>
+							</li>
+							<li class="footer-li">
+								<a class="footer-links" href="journal.html">Journal</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="social-ul" style="padding:0px">
+							<li class="social-li">
+								<a href="https://www.facebook.com" target="_blank">
+									<img
+										class="social-icons"
+										src="Image Assets/facebook_logo.png"
+										alt="facebook-logo"
+										height="25px"
+								/></a>
+							</li>
+							<li class="social-li">
+								<a href="https://www.pinterest.com" target="_blank">
+									<img
+										class="social-icons"
+										src="Image Assets/pinterest_logo.png"
+										alt="pinterest-logo"
+										height="25px"
+								/></a>
+							</li>
+							<li class="social-li">
+								<a href="https://www.youtube.com" target="_blank"
+									><img
+										class="social-icons"
+										src="Image Assets/youtube_logo.png"
+										alt="cart-logo"
+										height="25px"
+								/></a>
+							</li>
+						</ul>
+
+						<p>&copy; Emilia Kalyvides 2020 | All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
