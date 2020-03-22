@@ -1,41 +1,35 @@
-// Select the carousel you'll need to manipulate and the buttons you'll add events to
 const carousel = document.querySelector(".carousel");
-const card = carousel.querySelector(".products");
+const product = carousel.querySelector(".products");
 const leftButton = document.querySelector(".slide-left");
 const rightButton = document.querySelector(".slide-right");
 
-// Prepare to limit the direction in which the carousel can slide,
-// and to control how much the carousel advances by each time.
-// In order to slide the carousel so that only three cards are perfectly visible each time,
-// you need to know the carousel width, and the margin placed on a given card in the carousel
+// Limit the direction in which the carousel can slide/ control how much the carousel advances by each time.
 const carouselWidth = carousel.offsetWidth;
-const cardStyle = card.currentStyle || window.getComputedStyle(card);
-const cardMarginRight = Number(cardStyle.marginRight.match(/\d+/g)[0]);
+const productStyle = product.currentStyle || window.getComputedStyle(product);
+const productMarginRight = Number(productStyle.marginRight.match(/\d+/g)[0]);
 
-// Count the number of total cards you have
-const cardCount = carousel.querySelectorAll("[data-target='card']").length;
+// Product Count
+const productCount = carousel.querySelectorAll(".products").length;
 
-// Define an offset property to dynamically update by clicking the button controls
-// as well as a maxX property so the carousel knows when to stop at the upper limit
+// Define an offset property to dynamically update by clicking the button controls and a maxX property so the carousel knows when to stop at the upper limit
 let offset = 0;
 const maxX = -(
-	(cardCount / 3) * carouselWidth +
-	cardMarginRight * (cardCount / 3) -
+	(productCount / 3) * carouselWidth +
+	productMarginRight * (productCount / 3) -
 	carouselWidth -
-	cardMarginRight
+	productMarginRight
 );
 
-// Add the click events
 leftButton.addEventListener("click", function() {
 	if (offset !== 0) {
-		offset += carouselWidth + cardMarginRight;
+		offset += carouselWidth + productMarginRight;
 		carousel.style.transform = `translateX(${offset}px)`;
 	}
 });
 
 rightButton.addEventListener("click", function() {
 	if (offset !== maxX) {
-		offset -= carouselWidth + cardMarginRight;
+		offset -= carouselWidth + productMarginRight;
 		carousel.style.transform = `translateX(${offset}px)`;
 	}
 });
